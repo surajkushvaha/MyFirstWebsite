@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="DUmaster.master.cs" Inherits="MasterDemo_DUmaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="css/MyCss.css" rel="stylesheet" />
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <asp:ContentPlaceHolder id="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+            <div class="container ">
+                <div class="row header">
+                    <div class="col-md-3">
+                        <asp:Image ID="imgLogo" runat="server" SkinID="DarshanLogo"  />
+                    </div>
+                    <div class="col-md-9 " style="text-align:right">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1>Darshan University</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                               <h2>Rajkot - Morbi Highway, Gujarat-363650, INDIA</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <asp:HyperLink runat="server" ID="hlHomeHeader" Text="Home" />&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <asp:HyperLink runat="server" ID="hlAbout" Text="About" NavigateUrl="~/DUwebsite/AboutDU.aspx" />&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <asp:HyperLink runat="server" ID="hlProgram" Text="Program" />&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <asp:HyperLink runat="server" ID="hlLMS" Text="LMS" />&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <asp:HyperLink runat="server" ID="hlContact" NavigateUrl="~/DUwebsite/ContactUs.aspx" Text="Contact" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                         <asp:ContentPlaceHolder ID="cphMainContent" runat="server">
+                         </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <div class="row footer">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <asp:HyperLink runat="server" ID="HyperLink1" NavigateUrl="#" Text="Home" />&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <asp:HyperLink runat="server" ID="HyperLink2" NavigateUrl="#" Text="About" />&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <asp:HyperLink runat="server" ID="HyperLink3" NavigateUrl="#" Text="Program" />&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <asp:HyperLink runat="server" ID="HyperLink4" NavigateUrl="#" Text="LMS" />&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <asp:HyperLink runat="server" ID="HyperLink5" NavigateUrl="#" Text="Contact" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-center ">
+                                Darshan University
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+             </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,489 @@
+﻿<%@ Master Language="VB" CodeFile="TenPageTask.master.vb" Inherits="Content_TenPageTask" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../Content/CSS/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../Content/CSS/StyleSheet.css" />
+
+    <title></title>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body>
+   
+    <form id="form1" runat="server">
+        <div>
+            <div class="row justify-content-center align-items-center w-100 m-0 bg-light">
+                <div class="col-md-3 p-0">
+                    <a class="navbar-brand" href="#">
+                        <img src="../Content/Images/DIET_Logo.svg" width="100%" alt="" />
+                    </a>
+                </div>
+                <div class="col-md-8 p-0">
+                    <div class="row float-right " id="topBadges">
+
+                        <ul class="nav ">
+                            <li class="nav-item "><a class="nav-link badge bg-light "><i class="fa fa-bell"></i>
+                                &nbsp; Student Corner</a></li>
+                            <li class="nav-item">|</li>
+                            <li class="nav-item"><a class="nav-link badge bg-success text-light"><i class="fa fa-rupee">
+                            </i>&nbsp; Pay Fees</a></li>
+                            <li class="nav-item">|</li>
+                            <li class="nav-item"><a class="nav-link badge bg-light "><i class="fa fa-bell"></i>&nbsp;
+                                NIRF</a></li>
+                            <li class="nav-item">|</li>
+                            <li class="nav-item"><a class="nav-link badge bg-danger text-light"><i class="fa fa-bell">
+                            </i>&nbsp; Career</a></li>
+                            <li class="nav-item">|</li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <span class="badge bg-dark dropdown-toggle text-light" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 0.9rem !important;">
+                                        <i class="fa fa-bell"></i>&nbsp; Quick Links</span>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <div class="dropdown-divider"></div>
+
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">|</li>
+                            <li class="nav-item"><a class="nav-link badge bg-primary text-light"><i class="fa fa-bell">
+                            </i>&nbsp; Diploma Website</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="row float-right">
+                        <ul class="nav">
+                            <li class="nav-item"><span class="btn " type="button" style="font-size: 0.9rem !important;">
+                                Home
+                            </span></li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <span class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false" style="font-size: 0.9rem !important;">
+                                        About
+                                    </span>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <div class="dropdown-divider"></div>
+
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <span class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false" style="font-size: 0.9rem !important;">
+                                        Admission
+                                    </span>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <span class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false" style="font-size: 0.9rem !important;">
+                                        Department
+                                    </span>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <span class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false" style="font-size: 0.9rem !important;">
+                                        Facilities
+                                    </span>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <span class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false" style="font-size: 0.9rem !important;">
+                                        Events
+                                    </span>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <span class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false" style="font-size: 0.9rem !important;">
+                                        Consultancy
+                                    </span>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <span class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false" style="font-size: 0.9rem !important;">
+                                        Placement
+                                    </span>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">hi</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="bg-dark w-100 p-5"></div>
+            <!-- placeholder----------------------->
+            <div class="row">
+                <div class="col-9 p-3">
+                    <div class="m-3 p-1">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <div class="col-3" id="knowMore">
+                    <div class="row alert alert-light m-2 p-1 text-center justify-content-center">
+                        ------- Know More -------
+                    </div>
+                    <div class="row alert bg-primary text-light m-2 p-1">
+                        <div class="col-md-10">
+                            About
+                        </div>
+                        <div class="col-md-2">#</div>
+                    </div>
+
+                    <asp:HyperLink runat="server" NavigateUrl="~/Website/AboutInstiitute.aspx">
+                    <div class="row alert alert-light m-2 p-1">
+                        <div class="col-md-10">
+                            About Institute
+                        </div>
+                        <div class="col-md-2">&gt;</div>
+                    </div>
+                    </asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="~/Website/AboutTrust.aspx">
+                    <div class="row alert alert-light m-2 p-1">
+                        <div class="col-md-10">
+                            About Trust
+                        </div>
+                        <div class="col-md-2">&gt;</div>
+                    </div>
+                    </asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="~/Website/Vision.aspx">
+                    <div class="row alert alert-light  m-2 p-1">
+                        <div class="col-md-10">
+                            Vision & Mission
+                        </div>
+                        <div class="col-md-2">&gt;</div>
+                    </div>
+                    </asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="~/Website/Chairmen.aspx">
+                    <div class="row alert alert-light m-2 p-1">
+                        <div class="col-md-10">
+                            Chairman/Principal's Message
+                        </div>
+                        <div class="col-md-2">&gt;</div>
+                    </div>
+                    </asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="~/Website/BoardOfManagement.aspx">
+                    <div class="row alert alert-light m-2 p-1">
+                        <div class="col-md-10">
+                            Board of Management
+                        </div>
+                        <div class="col-md-2">&gt;</div>
+                    </div>
+                    </asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="~/Website/AntiRagging.aspx">
+                    <div class="row alert alert-light m-2 p-1">
+                        <div class="col-md-10">
+                            Anti Ragging Committiee
+                        </div>
+                        <div class="col-md-2">&gt;</div>
+                    </div>
+                    </asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="~/Website/WomanDevelopmentCell.aspx">
+                    <div class="row alert alert-light m-2 p-1">
+                        <div class="col-md-10">
+                            Women's Development Cell
+                        </div>
+                        <div class="col-md-2">&gt;</div>
+                    </div>
+                    </asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="~/Website/RedressalCell.aspx">
+                    <div class="row alert alert-light m-2 p-1">
+                        <div class="col-md-10">
+                            Grievance Redressal Cell
+                        </div>
+                        <div class="col-md-2">&gt;</div>
+                    </div>
+                    </asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="~/Website/SCSTcell.aspx">
+                    <div class="row alert alert-light m-2 p-1">
+                        <div class="col-md-10">
+                            SC-ST Cell
+                        </div>
+                        <div class="col-md-2">&gt;</div>
+                    </div>
+                    </asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="http://darshanalumni.in/">
+                    <div class="row alert alert-light m-2 p-1">
+                        <div class="col-md-10">
+                            Alumni
+                        </div>
+                        <div class="col-md-2">&gt;</div>
+                    </div>
+                    </asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="~/Website/PhotoGallery.aspx">
+                    <div class="row alert alert-light m-2 p-1">
+                        <div class="col-md-10">
+                            Photo Galllery
+                        </div>
+                        <div class="col-md-2">&gt;</div>
+                    </div>
+                    </asp:HyperLink>
+
+                </div>
+            </div>
+            <!-- placeholder----------------------->
+            <div class="row bg-dark" style="padding: 2em;">
+                <div class="col-md-3 m-0">
+                    <div class="card p-2 bg-dark text-light border-0 m-0">
+                        <h6 class="text-success">ABOUT US</h6>
+                        <hr class="border-light w-25 mt-2" />
+                        <p>
+                            Darshan Institute of Engineering & Technology is a leading institute offering undergraduate
+                            (B.E.), postgraduate (M.E.) and Diploma programs in engineering.
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 m-0">
+                    <div class="card p-2 bg-dark text-light border-0 m-0">
+                        <h6 class="text-success">ABOUT US</h6>
+                        <hr class="border-light w-25 mt-2" />
+                        <asp:HyperLink runat="server" NavigateUrl="#">
+                            <div class="row bg-dark text-light  m-0 p-0 " >
+                                 <div class="col-md-10">
+                                        Student Corner
+                                 </div>
+                                <div class="col-md-2 ">&gt;</div>
+                            </div>
+                        </asp:HyperLink>
+                        <hr class="m-1 border-light" />
+                        <asp:HyperLink runat="server" NavigateUrl="#">
+                            <div class="row bg-dark text-light  m-0 p-0" >
+                                 <div class="col-md-10">
+                                        DParent App <small>(Android)</small>
+                                 </div>
+                                <div class="col-md-2">&gt;</div>
+                            </div>
+                        </asp:HyperLink>
+                        <hr class="m-1 border-light" />
+                        <asp:HyperLink runat="server" NavigateUrl="#">
+                            <div class="row bg-dark text-light  m-0 p-0" >
+                                 <div class="col-md-10">
+                                        DParent App <small>(iPhone)</small>
+                                 </div>
+                                <div class="col-md-2">&gt;</div>
+                            </div>
+                        </asp:HyperLink>
+                        <hr class="m-1 border-light" />
+                        <asp:HyperLink runat="server" NavigateUrl="#">
+                            <div class="row bg-dark text-light  m-0 p-0" >
+                                 <div class="col-md-10">
+                                        DLib App <small>(Android)</small>
+                                 </div>
+                                <div class="col-md-2">&gt;</div>
+                            </div>
+                        </asp:HyperLink>
+                        <hr class="m-1 border-light" />
+                        <asp:HyperLink runat="server" NavigateUrl="#">
+                            <div class="row bg-dark text-light  m-0 p-0" >
+                                 <div class="col-md-10">
+                                        GTU Website
+                                 </div>
+                                <div class="col-md-2">&gt;</div>
+                            </div>
+                        </asp:HyperLink>
+                        <hr class="m-1 border-light" />
+                        <asp:HyperLink runat="server" NavigateUrl="#">
+                            <div class="row bg-dark text-light  m-0 p-0" >
+                                 <div class="col-md-10">
+                                        News Letter
+                                 </div>
+                                <div class="col-md-2">&gt;</div>
+                            </div>
+                        </asp:HyperLink>
+                        <hr class="m-1 border-light" />
+                    </div>
+                </div>
+
+                <div class="col-md-3 m-0">
+                    <div class="card p-2 bg-dark text-light border-0 m-0">
+                        <h6 class="text-success">FOR OTHERS</h6>
+                        <hr class="border-light w-25 mt-2" />
+                        <asp:HyperLink runat="server" NavigateUrl="#">
+                            <div class="row bg-dark text-light  m-0 p-0" >
+                                 <div class="col-md-10">
+                                        Journal : IJDI-ERET
+                                 </div>
+                                <div class="col-md-2">&gt;</div>
+                            </div>
+                        </asp:HyperLink>
+                        <hr class="m-1 border-light" />
+                        <asp:HyperLink runat="server" NavigateUrl="#">
+                            <div class="row bg-dark text-light  m-0 p-0" >
+                                 <div class="col-md-10">
+                                        Consultancy - Civil / Environment (CCC)
+                                 </div>
+                                <div class="col-md-2">&gt;</div>
+                            </div>
+                        </asp:HyperLink>
+                        <hr class="m-1 border-light" />
+                        <asp:HyperLink runat="server" NavigateUrl="#">
+                            <div class="row bg-dark text-light  m-0 p-0" >
+                                 <div class="col-md-10">
+                                        Consultancy - Electrical (EMC)
+                                 </div>
+                                <div class="col-md-2">&gt;</div>
+                            </div>
+                        </asp:HyperLink>
+                        <hr class="m-1 border-light" />
+                        <asp:HyperLink runat="server" NavigateUrl="#">
+                            <div class="row bg-dark text-light  m-0 p-0" >
+                                 <div class="col-md-10">
+                                        Software Development - ASWDC
+                                 </div>
+                                <div class="col-md-2">&gt;</div>
+                            </div>
+                        </asp:HyperLink>
+                        <hr class="m-1 border-light" />
+                        <asp:HyperLink runat="server" NavigateUrl="#">
+                            <div class="row bg-dark text-light  m-0 p-0" >
+                                 <div class="col-md-10">
+                                        Government Licenses & Tie-ups
+                                 </div>
+                                <div class="col-md-2">&gt;</div>
+                            </div>
+                        </asp:HyperLink>
+                        <hr class="m-1 border-light" />
+                        <asp:HyperLink runat="server" NavigateUrl="#">
+                            <div class="row bg-dark text-light  m-0 p-0" >
+                                 <div class="col-md-10">
+                                        Career
+                                 </div>
+                                <div class="col-md-2">&gt;</div>
+                            </div>
+                        </asp:HyperLink>
+                        <hr class="m-1 border-light" />
+                        <asp:HyperLink runat="server" NavigateUrl="#">
+                            <div class="row bg-dark text-light  m-0 p-0" >
+                                 <div class="col-md-10">
+                                         Civil Engineering Calculators
+                                 </div>
+                                <div class="col-md-2">&gt;</div>
+                            </div>
+                        </asp:HyperLink>
+                        <hr class="m-1 border-light" />
+
+                    </div>
+                </div>
+                <div class="col-md-3 m-0" >
+                    <div class="card p-2 bg-dark text-light border-0 m-0">
+                        <h6 class="text-success">ABOUT US</h6>
+                        <hr class="border-light w-25 mt-2" />
+                        <ul class="list-unstyled" style="background-image:url('../Content/Images/map2.png');    background-repeat: no-repeat;">
+                            <li class="media">
+                                <img src="..." />
+                                <div class="media-body">
+                                    <ul class="list-unstyled">
+                                        <li>At Hadala, Rajkot - Morbi Highway,</li>
+                                        <li>Gujarat-363650, INDIA</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="media my-4">
+                                <img src="..." />
+                                <div class="media-body">
+                                    <ul class="list-unstyled">
+                                        <li>(+91) 97277 47310</li>
+                                        <li>(+91) 97277 47311</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="media">
+                                <img src="..." />
+                                <div class="media-body">
+                                    <ul class="list-unstyled">
+                                        <li>info@darshan.ac.in</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <asp:HyperLink runat="server" NavigateUrl="#"><span class="bg-dark text-light">More contact details &gt;&gt;</span> </asp:HyperLink>
+
+
+                    </div>
+                </div>
+            </div>
+            <footer class=" text-light d-flex justify-content-between" style="padding: 1.5em;background:black">
+                <div>2020 &copy; All Right Reserved. Terms & Condition | Sitemap</div>
+                <div>
+                    <span><a class="fab fa-facebook-official"></a></span>&nbsp;
+                    <span><a class="fab fa-facebook-official"></a></span>&nbsp;
+                    <span><a class="fab fa-facebook-official"></a></span>&nbsp;
+                    <span><a class="fab fa-facebook-official"></a></span>&nbsp;
+                    <span><a class="fab fa-facebook-official"></a></span>&nbsp;
+                </div>
+            </footer>
+        </div>
+    </form>
+     
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+

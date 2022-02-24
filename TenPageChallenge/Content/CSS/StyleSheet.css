@@ -1,0 +1,22 @@
+﻿.bg-dark{
+   background-color: #141313!important;
+
+}
+
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background:#d7d5d5;
+    font-size: 0.9rem !important;
+    
+}
+
+#topBadges>ul>li{
+    padding:6px;
+  
+}
+#topBadges > ul > li > a {
+    padding:6px;
+}

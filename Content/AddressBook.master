@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AddressBook.master.cs"
+    Inherits="Content_AddressBook" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <%--<script src="https://cdn.tailwindcss.com"></script>--%>
+
+    <title>AddressBook</title>
+    
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/AddressBook.css" />
+    
+</head>
+<body class="bg-info">
+    <section class="bg-dark mb-3">
+        <div class="container py-3 px-4">
+            <nav class="justify-content-center">
+                <ul class="d-flex justify-content-around list-unstyled">
+                    <li>
+                        <asp:HyperLink runat="server" NavigateUrl="~/AdminPanel/Contact/ContactList.aspx">Contact</asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink runat="server" NavigateUrl="~/AdminPanel/ContactCategory/ContactCategoryList.aspx">Contact Category</asp:HyperLink>
+                    </li>
+                    <li><asp:HyperLink runat="server"  NavigateUrl="~/AdminPanel/City/CityList.aspx">City</asp:HyperLink></li>
+                    <li><asp:HyperLink runat="server" NavigateUrl="~/AdminPanel/State/StateList.aspx">State</asp:HyperLink></li>
+                    <li><asp:HyperLink runat="server" NavigateUrl="~/AdminPanel/Country/CountryList.aspx">Country</asp:HyperLink></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <form id="form1" runat="server">
+        <div class="container-fluid">
+            <asp:ContentPlaceHolder ID="cphMainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
